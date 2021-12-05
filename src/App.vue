@@ -1,25 +1,18 @@
 <template>
-  
-  <StartPage :myJson="myJson"/>
+  <router-view></router-view>
 </template>
 
 <script>
-import StartPage from './components/StartPage.vue'
-import settings from './json/settings.json'
+//import StartPage from './components/StartPage.vue'
+
+
 export default {
-  name: 'App',
+  name: "App",
   components: {
-      StartPage,
+    //StartPage,
   },
-  data() {
-    console.log(settings)
-    return{
-      myJson: settings[0]
-    }
-  }
-}
+ 
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
