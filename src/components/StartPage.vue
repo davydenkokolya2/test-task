@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="text" v-model="changeInput" name="" id="" />
-    <button :disabled="disabled">{{ this.myJson.nameStartButton }}</button>
+    <button :disabled="disabled" @click="$router.push('questionspage')">{{ this.myJson.nameStartButton }}</button>
   </div>
 </template>
 
