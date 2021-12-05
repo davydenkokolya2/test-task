@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Checkbox v-if="questions[i].answerType == 'checkbox'"></Checkbox>
+    <Checkbox v-if="questions[i].answerType == 'checkbox'" :questions='questions[i]'></Checkbox>
     <Radio v-if="questions[i].answerType == 'radio'" :questions='questions[i]'></Radio>
-    <Text v-if="questions[i].answerType == 'text'"></Text>
+    <Text v-if="questions[i].answerType == 'text'" :questions='questions[i]'></Text>
     
     <button v-if="i != questions.length - 1" @click="nextQuestion">{{myJson.nameNextButton}}</button> 
     <button v-if="i == questions.length - 1" @click="1">{{myJson.nameFinishButton}}</button>

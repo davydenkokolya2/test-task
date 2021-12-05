@@ -1,17 +1,15 @@
 <template>
-  <input type="text">
+  <div>{{ questions.quest }}</div>
+  <input type="text" />
 </template>
 
 <script>
-//import StartPage from './components/StartPage.vue'
-
-
 export default {
   name: "App",
-  components: {
-    //StartPage,
+  components: {},
+  props: {
+    questions: Object,
   },
- 
 };
 </script>
 
