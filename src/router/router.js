@@ -4,7 +4,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import StartPage from '../components/StartPage'
 import QuestionsPage from '../components/QuestionsPage'
-
+import ResultPage from '../components/ResultPage'
 // Vue.use(VueRouter);
 
 let router = createRouter({
@@ -21,6 +21,12 @@ let router = createRouter({
             name: 'QuestionsPage',
             component: QuestionsPage,
             props: true,
+        },
+        {
+            path: '/resultpage',
+            name: 'ResultPage',
+            component: ResultPage,
+            props: true, 
         }
     ]
 })
