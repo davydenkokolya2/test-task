@@ -1,6 +1,6 @@
 <template>
   <div>{{ questions.quest }}</div>
-  <input v-model="message" type="text" />
+  <el-input v-model="message" type="text" />
 </template>
 
 <script>

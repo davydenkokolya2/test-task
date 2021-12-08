@@ -1,9 +1,9 @@
 <template>
   <div>{{ questions.quest }}</div>
-  <div v-for="item in questions.answers" :key="item.answer">
-    <input type="radio" name="radioquestion"  @change="react(item.answer)" />
-    {{ item.answer }}
-  </div>
+  <el-radio-group v-model="radio" v-for="item in questions.answers" :key="item.answer">
+    
+    <el-radio :label="item.answer"  @change="react(item.answer)" />
+  </el-radio-group>
 </template>
 
 <script>
@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       id: "",
+      radio: false
     };
   },
 };

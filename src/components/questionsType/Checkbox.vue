@@ -1,9 +1,9 @@
 <template>
   <div>{{ questions.quest }}</div>
-  <div v-for="item in questions.answers" :key="item.answer">
-    <input type="checkbox" name="checkboxquestion" @change="react(item.answer)" />
-    {{ item.answer }}
-  </div>
+  <el-checkbox-group v-model="checkList" v-for="item in questions.answers" :key="item.answer">
+    <el-checkbox :label="item.answer"  @change="react(item.answer)" />
+ 
+  </el-checkbox-group>
 </template>
 
 <script>
@@ -29,6 +29,7 @@ export default {
   },
   data() {
     return {
+      checkList: [],
       id: [],
     };
   },

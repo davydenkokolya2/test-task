@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(item, index) in questions" :key="(item, index)">
+  <div class="resultPage" v-for="(item, index) in questions" :key="(item, index)">
     <div v-if="item.answerType == 'checkbox'">
       {{ item.quest }} <div v-for="item2 in ANSWER[index].id" :key="item2"> {{item2}} </div>
     </div>
@@ -38,4 +38,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.resultPage{
+  text-align: center;
+}
+</style>

@@ -1,13 +1,14 @@
-<template>
-  <div>
-    <input type="text" v-model="changeInput" name="" id="" />
-    <button :disabled="disabled" @click="clickStartButton">
+<template >
+  <div class="startPage">
+    <el-input  type="text" v-model="changeInput" placeholder="Enter name" id="" />
+    <el-button  type="success" :disabled="disabled" @click="clickStartButton">
       {{ this.myJson.nameStartButton }}
-    </button>
+    </el-button>
   </div>
 </template>
 
 <script>
+
 import settings from "../json/settings.json";
 import { mapActions } from "vuex";
 export default {
@@ -36,4 +37,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.startPage {
+  
+  text-align: center;
+  
+}
+.el-input {
+ width: auto   !important
+}
+</style>

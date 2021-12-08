@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div>{{NAME}}</div>
+  <div class="questionPage">
+    <div>Тест проходит: {{NAME}}</div>
     <Checkbox
       v-if="questions[i].answerType == 'checkbox'"
       :questions="questions[i]"
@@ -18,12 +18,12 @@
       @react="changeAnswer"
     ></Text>
 
-    <button v-if="i != questions.length - 1" @click="nextQuestion">
+    <el-button type="success" v-if="i != questions.length - 1" @click="nextQuestion">
       {{ myJson.nameNextButton }}
-    </button>
-    <button v-if="i == questions.length - 1" @click="$router.push({ name: 'ResultPage', params:{id: answer} })">
+    </el-button>
+    <el-button type="success" v-if="i == questions.length - 1" @click="$router.push({ name: 'ResultPage', params:{id: answer} })">
       {{ myJson.nameFinishButton }}
-    </button>
+    </el-button>
   </div>
 </template>
 
@@ -68,4 +68,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.questionPage {
+ text-align: center;
+ margin: auto
+}
+.el-radio-group{
+  display: block !important;
+  
+}
+</style>
